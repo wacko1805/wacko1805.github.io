@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(0deg, transparent 31px, #bcbdc8 32px),linear-gradient(90deg,  transparent 31px, #bcbdc8 2px);
+    background-color: white;
+      background-size: 32px 32px;
+      margin-left: 20%;
+      margin-right: 20%;
+}
+@media only screen and (max-width: 600px) {
+body {
+    margin-left: 5%;
+      margin-right: 5%;
+}
+}
+html {
+    height: 100%;
+  }
+header {
+    margin-top: 5rem;
+}
+header p {
+    margin-top: 0;
+    color: #726a95;
+    font-size: 25px;
+}
+header h1 {
+    color: #47597e;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+main {
+   
+
+}
+.flex-item {
+    background-color: white;
+    width: 350px;
+    border-radius: 5px;
+    border: 2px #dbe6fd solid;
+    margin-bottom: 60px;
+
+}
+.flex-item h2 {
+    color: #707070;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 35px;
+
+}
+.flex-item p {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #726a95;
+}
+.flex-item img {
+    border-radius: 5px;
+    margin-top: 5px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+main h1 {
+    text-align: center;
+    color: #726a95;
+    font-size: 40px;
+}
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    
+
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
