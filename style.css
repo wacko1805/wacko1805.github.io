@@ -35,16 +35,42 @@ main {
   border-radius: 15px;
   -webkit-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18); 
   box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18);
-  z-index: -99;
   position: relative;
+  
+  margin-bottom: 50px;
+}
+
+.my-info {
+  margin: 0;
+
+  padding: 0px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18); 
+  box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18);
+  padding: 20px;
+  margin-bottom: 5px;
+}
+.my-info p {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.5pc;
+  text-align: center;
+}
+
+.content p {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.5pc;
 }
 .code-type {
   position: absolute;
   bottom: 10px;
   right: 15px;
+  text-align: right;
 }
 .code-type p {
   font-size: 15px;
+  font-weight: 400;
 }
 .body {
   padding-left: 26vw;
@@ -71,7 +97,6 @@ main h2 {
 }
 main p {
   color: #787878;
-  font-size: 1.5rem;
   line-height: 1.8;
 }
 .buttons {
@@ -80,7 +105,7 @@ main p {
  bottom: 20px;
  left: 30%;
  right: 30%;
-   
+ font-family: 'Poppins', sans-serif;
 }
 
  .badge  {
@@ -116,6 +141,7 @@ box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18);
 position: fixed;
 top: 0;
 left: 0;
+z-index: 1;
 width: 100%;
 padding-bottom: 0;
 }
@@ -214,6 +240,7 @@ footer .back-to-top  {
 	border-radius: 30px;
 	padding: 5px 15px;
 	color: white;
+  text-decoration: none;
 }
 footer .links {
 	padding-top: 30px;
@@ -250,7 +277,7 @@ footer .social-links i:hover {
 
 header {
   padding-top: 130px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 4pc;
 }
 header h1 {
@@ -289,3 +316,85 @@ header {
   background-color: #5E8B7E;
 }
 
+#mysql {
+  background-color: #D54C4C;
+}
+
+ .social-links {
+	padding-top: 30px;
+}
+
+ .social-links i {
+	padding: 10px;
+	font-size: 25px;
+	color: #555555;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.social-links i:hover {
+	color: #949CDF;
+}
+
+
+
+.flex-grid {
+  display: flex;
+}
+.flex-grid .col {
+  flex: 1;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+@media (max-width: 500px) {
+  .flex-grid, .flex-grid-thirds {
+    display: block;
+ }
+  .flex-grid .col, .flex-grid-thirds .col {
+    width: 100%;
+    margin: 0 0 10px 0;
+ }
+}
+* {
+  box-sizing: border-box;
+}
+
+.flex-grid {
+  margin: 0 0 20px 0;
+}
+.col {
+  margin: 4px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18); 
+  box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.18);
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.col:hover {
+
+
+-webkit-box-shadow: inset 0px 5px 10px 5px rgba(0,0,0,0.18); 
+box-shadow:inset 0px 5px 10px 5px rgba(0,0,0,0.18);
+}
+
+.col p {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.4pc;
+  text-decoration: none;
+}
+.col a {
+  text-decoration: none;
+}
+.col p i {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
