@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+@import url(header.css);
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primaryContainer);
+  border-radius: var(--radius-big);
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tertiary);
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+/* FONTS:
+  font-family: "Shippori Antique B1", sans-serif;
+
+*/
+body {
+    margin: 0;
+    background-color: var(--background);
+    font-family: "Shippori Antique B1", sans-serif;
+}
+.name-container {
+  height: 100vh;
+}
+.name {
+    padding: 25vh 20vw;
+    display: block;
+    transition: 1s;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    
+  }
+  
+  @media screen and (max-width: 1350px) {
+    .name {
+      padding: 25vh 15vw;
+      font-size: 10vw;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .name {
+      padding: 25vh 5vw;
+      font-size: 10vw;
+    }
+  }
+
+.name h1 {
+    color: var(--tertiary);
+    font-size: 5vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;  /* Distribute items evenly */
+    align-items: center; 
+    text-transform: capitalize;
+    font-weight: bolder;
+    transition: 0.7s;
+}
+
+@media screen and (max-width: 1350px) {
+  .name h1 {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .name h1 {
+    font-size: 10vw;
+  }
+}
+
+.name h1 span {
+    text-align: center; 
+    transition: 0.5s;
+}
+
+.name h1 span:hover {
+  color: var(--error);
+}
+
+
+.cards-parent {
+  border-radius: 20px 20px 0px 0px;
+  position: fixed;
+  background-color: var(--primaryContainer);
+  bottom: 0;
+  padding: 0px 15px 15px 15px;
+  left: 0;
+  right: 0;
+  transition: padding-top 0.3s ease, padding 0.3s ease, rotate 0.3s ease; /* Transition max-height and padding */
+  margin: 10vw;
+  margin-bottom: 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+@media screen and (max-width: 1350px) {
+  .cards-parent {
+    margin: 5vw;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .cards-parent {
+    margin: 3vw;
+    margin-bottom: 0;
+  }
+}
+.cards-parent  .closed2 i {
+  padding-top: 20px;
+  rotate: 0deg;
+}
+.cards-parent i {
+  color: var(--primary);
+  padding: 10px;
+  cursor: pointer;
+  rotate: 180deg
+}
+
+
+
+.cards-parent  {
+  text-align: center;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transition max-height and padding */
+  overflow: hidden; /* Hide content overflow during transition */
+  max-height: 500px; /* A maximum height value that allows for expansion */
+}
+
+.cards.closed {
+  max-height: 0px; /* Smaller max-height when the element is collapsed */
+  padding-top: 0; /* Optional, adjust padding to fit your needs */
+  padding-bottom: -100px; /* Optional, adjust padding to fit your needs */
+}
+.card {
+    flex: 1 1 calc(0%); /* Makes each box take up 25% of the container width minus the gap */
+    color: var(--primary);
+    border: 2px solid var(--background);
+    background-color: var(--background);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px 0px;
+    height: 20vh;
+    transition: 0.1s ease;
+    font-size: 1.3rem;
+    line-height: 19vh;
+  }
+.card.scrolled {
+  height: 4vh;
+  line-height: 3.5vh;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card:hover {
+  border: 2px solid var(--primary);
+  cursor: pointer;
+}
+.card:active {
+  background-color: var(--primary);
+  border: 2px solid var(--primaryContainer);
+  color: var(--background);
+}
+@media (max-width: 850px) {
+    .card {
+      flex: 1 1 calc(30% + 20px); /* Makes each box take up 50% of the container width minus the gap */
+      height: 10vh;
+    }
+
+    .card p {
+      line-height: 9vh;
+    }
+    .card .scrolled {
+      height: 4vh;
+      line-height: 3.5vh;
+    }
+  }
+
+.about-container {
+  height: 100vh;
+  position: relative;
+}
+.about {
+  position: absolute;
+  top: 30vh;
+  left: 5vw;
+  right: 5vw;}
+.about .title{
+  color: var(--primary);
+}
+
+.about .title h1 {
+  margin: 0;
+}
+
+.about .content {
+  color: var(--onBackground);
+}
+
+.about .content p {
+  margin: 0;
+  font-size: 3vw;
+  line-height: 2rem;
+  text-align: justify;
+}

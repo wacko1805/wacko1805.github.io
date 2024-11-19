@@ -1,0 +1,190 @@
+    header {
+        background-color: var(--primaryContainer);
+        box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 3vw;
+        right: 3vw;
+        border-radius: 0px 0px 10px 10px;
+    }
+    
+    header ul {
+        margin: 0;
+        padding: 20px 30px;
+        list-style: none;
+        overflow: hidden;
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+    }
+    
+    header li  {
+        display: block;
+        text-decoration: none;
+        transition: 0.3s ease-out;
+        border: 2px solid var(--background);
+        background-color: var(--background);
+        border-radius: 5px;
+        padding: 9px 30px;
+        margin: 0px 6px;
+        text-decoration: none;
+        color: var(--primary);
+    }
+
+    header li a {
+        
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        header ul {
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+        }
+    
+        header li  {
+            flex: 1 1 calc(30% + 20px); /* Makes each box take up 50% of the container width minus the gap */
+            color: var(--primary);
+            border: 2px solid var(--background);
+            background-color: var(--background);
+            text-decoration: none;
+            color: var(--primary);
+            border-radius: 15px;
+            text-align: center;
+            padding: 10px 0px;
+            height: 10vh;
+            transition: 0.1s ease;
+            /* margin: 0; */
+            font-size: 1.2rem;
+            line-height: 5vh;
+        }
+
+        header li a {
+            
+        }
+    }
+    
+    header li:hover,
+    header .menu-btn:hover {
+        border: 2px solid var(--primary);
+        cursor: pointer;
+    }
+
+    header li:active,
+    header .menu-btn:active { 
+        background-color: var(--primary);
+        border: 2px solid var(--primaryContainer);
+        color: var(--background);
+    }
+    
+    header .logo {
+        color: #555555;
+        display: block;
+        float: left;
+        font-size: 1.6em;
+        /* padding: 24px 40px; */
+        text-decoration: none;
+    }
+    
+    /* menu */
+    
+    header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    
+    /* menu icon */
+    
+    header .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+        float: right;
+    }
+    
+    
+    header .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    
+    header .menu-icon .navicon:before,
+    header .menu-icon .navicon:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    
+    header .menu-icon .navicon:before {
+        top: 5px;
+    }
+    
+    header .menu-icon .navicon:after {
+        top: -5px;
+    }
+    
+    /* menu btn */
+    
+    header .menu-btn {
+        display: none;
+    }
+    
+    header .menu-btn:checked ~ .menu {
+        max-height: 500px;
+    }
+    
+    header .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    
+    header .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    header .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    
+    header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+    
+    /* 48em = 768px */
+    
+    @media (min-width: 1000px) {
+       
+        header li {
+            float: left;
+            padding: 9px 30px;
+        }
+        header li a {
+        }
+        header .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        header .menu-icon {
+            display: none;
+        }
+    
+    }
+    
+    
+    /* end header */
