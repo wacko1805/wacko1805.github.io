@@ -149,9 +149,10 @@ body {
 }
 
 .cards.closed {
+  transition-delay: 200ms;
+  transition-property: max-height;
   max-height: 0px; /* Smaller max-height when the element is collapsed */
   padding-top: 0; /* Optional, adjust padding to fit your needs */
-  padding-bottom: -100px; /* Optional, adjust padding to fit your needs */
 }
 .card {
     flex: 1 1 calc(0%); /* Makes each box take up 25% of the container width minus the gap */
@@ -176,13 +177,17 @@ body {
 }
 
 .card:hover {
+  transition-delay: 100ms;
+  transition-property: border;
   border: 2px solid var(--primary);
   cursor: pointer;
 }
 .card:active {
-  background-color: var(--primary);
-  border: 2px solid var(--primaryContainer);
-  color: var(--background);
+  /* transition-delay: 100ms;
+  transition-property: background-color; */
+  /* background-color: var(--primary); */
+  border: 2px solid var(--error);
+  /* color: var(--background); */
 }
 @media (max-width: 850px) {
     .card {
@@ -206,8 +211,27 @@ body {
 .about {
   position: absolute;
   top: 30vh;
-  left: 5vw;
-  right: 5vw;}
+  left: 20vw;
+  right: 20vw;
+}
+
+@media screen and (max-width: 1350px) {
+  .about {
+    top: 25vh;
+    left: 10vw;
+    right: 10vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about {
+    top: 20%;
+    left: 5vw;
+    right: 5vw;
+  }
+}
+
+
 .about .title{
   color: var(--primary);
 }
@@ -222,7 +246,6 @@ body {
 
 .about .content p {
   margin: 0;
-  font-size: 3vw;
-  line-height: 2rem;
+  font-size: 1.6rem;
   text-align: justify;
 }
