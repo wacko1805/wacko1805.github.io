@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACKSAM | Portfolio</title>
+    <script src="https://wacko1805.github.io/MonetWebAdapter/DynamicWebAdapter.js"></script>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <meta name="description" content="Jack Sam Portfolio">
+    <meta name="keywords" content="MagiskGApps, Jack Sam, Magisk, android, web, MonetWebAdapter, DynamicWebAdapter, wacko1805, wacko1805 github, wacko, jacksam, jacks.am">
+    <meta name="author" content="Wacko1805">
+    <script src="https://kit.fontawesome.com/14f55a56cc.js" crossorigin="anonymous"></script>
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .loading {
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            color: var(--tertiary);
+        }
+
+        .image-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .image-grid .loading  {
+            color: var(--tertiary);
+        }
+
+        .image-item {
+            height: 30vh;
+            flex-grow: 1;
+        }
+
+        @media screen and (max-width: 1350px) {
+            .image-item {
+                height: 30vh;
+            }
+        }
+
+        @media screen and (max-width: 850px) {
+            .image-item {
+                height: 20vh;
+            }
+        }
+
+        .image-item img {
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+            border-radius: 10px;
+            border: 2px solid var(--background);
+            transition: 0.1s;
+        }
+
+        .image-item img:hover {
+            border: 2px solid var(--tertiary);
+            cursor: pointer;
+        }
+        .image-item img:active {
+            border: 2px solid var(--error);
+        }
+
+        .image-header h1{
+            font-size: 5vw;
+        }
+
+        .title {
+            display: block;
+            transition: 1s;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+
+        .title h1 {
+            color: var(--tertiary);
+            font-size: 5vw;
+            margin: 0;
+            padding: 20px 5px;
+            display: flex;
+            justify-content: space-between;  /* Distribute items evenly */
+            align-items: center; 
+            text-transform: capitalize;
+            font-weight: bolder;
+            transition: 0.7s;
+            font-size: 3vw;
+        }
+
+        @media screen and (max-width: 1350px) {
+        .title h1 {
+            font-size: 5vw;
+        }
+        }
+
+        @media screen and (max-width: 850px) {
+        .title h1 {
+            font-size: 5vw;
+        }
+        }
+
+        .title h1 span {
+            text-align: center; 
+            transition: 0.5s;
+        }
+
+        .title h1 span:hover {
+            color: var(--error);
+        }
+
+        .chips {
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <div class="image-content">
+
+        <div class="image-header">
+            <div class="title">
+                <h1>
+                    <span>P</span>
+                    <span>h</span>
+                    <span>o</span>
+                    <span>t</span>
+                    <span>o</span>
+                    <span>s</span>
+                    <span>    </span>
+                    <span>o</span>
+                    <span>f</span>
+                    <span>    </span>
+                    <span>T</span>
+                    <span>h</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>g</span>
+                    <span>s</span>
+                </h1>   
+            </div>        
+        </div>
+
+        <div class="chips">
+                
+        </div>
+            
+        <div class="image-grid" id="imageContainer">
+            
+            <!-- Images be here -->
+        </div>
+        
+        <div class="loading" id="loading">
+            <p>Loading more images...</p></div>
+
+    </div>
+
+
+    <!-- Bottom Fixed cards: -->
+    <div class="cards-parent"> 
+        <span class="toggleButton">
+            <i id="toggleClassBtn" class="fa fa-chevron-up"></i>
+        </span>
+    
+        <div class="cards">
+                    
+            <div id="projects" class="card">
+                <p>Projects</p>
+            </div>
+                
+            <div id="photos" class="card">
+                <p>Photos</p>
+            </div>
+                
+            <div id="about" class="card">
+                <p>About Me</p>
+            </div>
+                
+            <div id="blog" class="card">
+                <p>Blog</p>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="/assets/js/collabsible.js"></script>
+    <script src="/assets/js/nav.js"></script>
+
+
+</body>
+</html>

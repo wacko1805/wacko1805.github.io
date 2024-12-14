@@ -206,28 +206,27 @@ body {
 
 .about-container {
   height: 100vh;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about {
-  position: absolute;
-  top: 30vh;
-  left: 20vw;
-  right: 20vw;
+  padding: 5vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 @media screen and (max-width: 1350px) {
   .about {
-    top: 25vh;
-    left: 10vw;
-    right: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 
 @media screen and (max-width: 850px) {
   .about {
-    top: 20%;
-    left: 5vw;
-    right: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
@@ -248,4 +247,23 @@ body {
   margin: 0;
   font-size: 1.6rem;
   text-align: justify;
+}
+
+.image-content {
+  padding: 0vh 20vw;
+}
+
+
+@media screen and (max-width: 1350px) {
+  .image-content {
+    padding: 1vh 15vw;
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .image-content {
+    padding: 1vh 5vw;
+    font-size: 10vw;
+  }
 }
