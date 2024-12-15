@@ -1,0 +1,24 @@
+{
+    "projects": {
+        "project": [
+            {
+                "title": "Title Project One",
+                "content": "Test Text",
+                "tags": "tag one, tag two, tag three",
+                "support": "updated"
+            },
+            {
+                "title": "Project Two",
+                "content": "Another project description",
+                "tags": "tag four, tag five",
+                "support": "in progress"
+            },
+            {
+                "title": "Project Three",
+                "content": "This is yet another project",
+                "tags": "tag six, tag seven, tag eight",
+                "support": "completed"
+            }
+        ]
+    }
+}

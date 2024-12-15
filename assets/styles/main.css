@@ -249,20 +249,20 @@ body {
   text-align: justify;
 }
 
-.image-content {
+.image-content, .projects-content {
   padding: 0vh 20vw;
 }
 
 
 @media screen and (max-width: 1350px) {
-  .image-content {
+  .image-content, .projects-content {
     padding: 1vh 15vw;
     font-size: 10vw;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .image-content {
+  .image-content, .projects-content {
     padding: 1vh 5vw;
     font-size: 10vw;
   }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JACKSAM | Portfolio</title>
+        <script src="https://wacko1805.github.io/MonetWebAdapter/DynamicWebAdapter.js"></script>
+        <link rel="stylesheet" href="/assets/styles/main.css">
+        <meta name="description" content="Jack Sam Portfolio">
+        <meta name="keywords" content="MagiskGApps, Jack Sam, Magisk, android, web, MonetWebAdapter, DynamicWebAdapter, wacko1805, wacko1805 github, wacko, jacksam, jacks.am">
+        <meta name="author" content="Wacko1805">
+        <script src="https://kit.fontawesome.com/14f55a56cc.js" crossorigin="anonymous"></script>
+        <style>
+            .projects-content h1{
+                font-size: 5vw;
+            }
+
+            .title {
+                display: block;
+                transition: 1s;
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10 and IE 11 */
+                user-select: none; /* Standard syntax */
+            }
+
+            .title h1 {
+                color: var(--tertiary);
+                font-size: 5vw;
+                margin: 0;
+                padding: 20px 5px;
+                display: flex;
+                justify-content: space-between;  /* Distribute items evenly */
+                align-items: center; 
+                text-transform: capitalize;
+                font-weight: bolder;
+                transition: 0.7s;
+                font-size: 3vw;
+            }
+
+            @media screen and (max-width: 1350px) {
+            .title h1 {
+                font-size: 5vw;
+            }
+            }
+
+            @media screen and (max-width: 850px) {
+            .title h1 {
+                font-size: 5vw;
+            }
+            }
+
+            .title h1 span {
+                text-align: center; 
+                transition: 0.5s;
+            }
+
+            .title h1 span:hover {
+                color: var(--error);
+            }
+
+            .project-container {
+                background-color: var(--surface);
+                padding: 20px 30px;
+                border-radius: 5px;
+            }   
+
+            .project-container h3 {
+                font-size: 5vw;
+                color: var(--tint);
+                margin: 0;
+            }
+
+            .project-container p {
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="projects-content">
+
+            <div class="title">
+                <h1>
+                    <span>P</span>
+                    <span>r</span>
+                    <span>o</span>
+                    <span>j</span>
+                    <span>e</span>
+                    <span>t</span>
+                    <span>s</span>
+                </h1>   
+            </div>    
+
+            <div id="projects"></div>
+
+        </div>
+
+
+
+            <!-- Bottom Fixed cards: -->
+        <div class="cards-parent"> 
+
+            <span class="toggleButton">
+                <i id="toggleClassBtn" class="fa fa-chevron-up"></i>
+            </span>
+    
+            <div class="cards">
+                        
+                <div id="projects" class="card">
+                    <p>Projects</p>
+                </div>
+                    
+                <div id="photos" class="card">
+                    <p>Photos</p>
+                </div>
+                    
+                <div id="about" class="card">
+                    <p>About Me</p>
+                </div>
+                    
+                <div id="blog" class="card">
+                    <p>Blog</p>
+                </div>
+                
+            </div>
+        
+    </div>
+
+    <script src="/assets/js/collabsible.js"></script>
+    <script src="/assets/js/nav.js"></script>
+    <script src="projects.js"></script>
+
+    </body>
+
+</html>
