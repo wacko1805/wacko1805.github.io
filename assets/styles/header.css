@@ -15,8 +15,8 @@
         list-style: none;
         overflow: hidden;
         display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     
     header li  {

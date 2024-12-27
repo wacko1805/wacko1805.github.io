@@ -1,5 +1,5 @@
         // Function to render projects
-        function renderProjects(jsonData, containerId, projectClass, titleClass, contentClass, tagClass, supportClass) {
+        function renderProjects(jsonData, containerId, projectClass, titleClass, contentClass, tagClass, urlClass) {
             const container = document.getElementById(containerId);
             
             // Clear the container before appending new projects
@@ -36,11 +36,11 @@
                 }
                 projectDiv.appendChild(tagsDiv);
 
-                // Support
-                const support = document.createElement('p');
-                support.classList.add(supportClass);
-                support.textContent = `Support: ${project.support || "Not available"}`;
-                projectDiv.appendChild(support);
+                // url
+                const url = document.createElement('p');
+                url.classList.add(urlClass);
+                url.textContent = `url: ${project.url || "Not available"}`;
+                projectDiv.appendChild(url);
 
                 // Append the project div to the container
                 container.appendChild(projectDiv);
@@ -58,7 +58,7 @@
                     'project-title', // Title class
                     'project-content', // Content class
                     'tag', // Tag class
-                    'project-support' // Support class
+                    'project-url' // url class
                 );
             })
             .catch(error => {

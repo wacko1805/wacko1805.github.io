@@ -23,6 +23,10 @@
 ::-webkit-scrollbar-thumb:active {
   cursor: grabbing;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /* FONTS:
   font-family: "Shippori Antique B1", sans-serif;
 
@@ -36,9 +40,13 @@ body {
   height: 100vh;
 }
 .name {
-    padding: 25vh 20vw;
+    /* padding: 25vh 20vw; */
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
     display: block;
-    transition: 1s;
+    transition: padding 0.1s ease-out;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
@@ -47,14 +55,22 @@ body {
   
   @media screen and (max-width: 1350px) {
     .name {
-      padding: 25vh 15vw;
+      /* padding: 25vh 15vw; */
+      padding-top: 25vh;
+      padding-bottom: 25vh;
+      padding-left: 15vw;
+      padding-right: 15vw;
       font-size: 10vw;
     }
   }
   
   @media screen and (max-width: 850px) {
     .name {
-      padding: 25vh 5vw;
+      /* padding: 25vh 5vw; */
+      padding-top: 25vh;
+      padding-bottom: 25vh;
+      padding-left: 5vw;
+      padding-right: 5vw;
       font-size: 10vw;
     }
   }
@@ -176,6 +192,13 @@ body {
     margin: 0;
 }
 
+.active {
+  transition-delay: 100ms;
+  transition-property: border;
+  /* border: 2px solid var(--error); */
+  color: var(--error);
+}
+
 .card:hover {
   transition-delay: 100ms;
   transition-property: border;
@@ -247,6 +270,15 @@ body {
   margin: 0;
   font-size: 1.6rem;
   text-align: justify;
+}
+
+.about .content p a {
+  color: var(--error);
+  text-decoration: none;
+}
+
+.about .content p a:hover {
+  border-bottom: 2px solid var(--error);
 }
 
 .image-content, .projects-content {
