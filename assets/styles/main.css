@@ -299,3 +299,22 @@ body {
     font-size: 10vw;
   }
 }
+
+.responsive-main {
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+@media screen and (max-width: 1350px) {
+  .responsive-main {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .responsive-main {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
