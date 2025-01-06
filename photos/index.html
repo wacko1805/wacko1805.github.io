@@ -11,8 +11,16 @@
     <meta name="author" content="Wacko1805">
     <script src="https://kit.fontawesome.com/14f55a56cc.js" crossorigin="anonymous"></script>
     <style>
+
+                /* Scrollbar Styles */
+        ::-webkit-scrollbar {
+        height: 7px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        }
         img {
-            width: 100%;
             height: auto;
             margin-bottom: 20px;
         }
@@ -28,6 +36,7 @@
             gap: 10px;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-bottom: 15vh;
         }
 
         .image-grid .loading  {
@@ -116,9 +125,142 @@
             color: var(--error);
         }
 
-        .chips {
-            
+
+
+        .tags-container {
+            overflow-x: auto;
+            overflow-y: auto;
+            white-space: nowrap; /* Prevent wrapping of tags */
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping of the tags container */
+            justify-content: space-between;
+            width: 100%; 
+            margin-bottom: 5px;
         }
+        @media screen and (max-width: 1050px) {
+
+            .tags-container {
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                display: block;
+                flex-wrap: nowrap; /* Allow wrapping of the tags container */
+                justify-content: none;
+                margin-bottom: 10px;
+            }
+        }
+
+        .tags {
+            margin: 0;
+            margin-bottom: 5px;
+            padding: 0;
+            font-size: 0; 
+            display: flex;
+            flex-wrap: wrap; /* Allows the spans to wrap inside this container */
+            width: 100%; /* Make sure tags container fills full width */
+        }
+        .tag {
+            transition: 0.5s;
+        }
+        @media screen and (max-width: 1050px) {
+            .tags {
+                margin: 0;
+                margin-bottom: 0px;
+                padding: 0;
+                display: block;
+                font-size: 0; 
+            }
+
+        }
+
+        .tags span {
+            font-size: 20px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            background-color: var(--primaryContainer);
+            border: 3px solid var(--primaryContainer);
+            color: var(--error);
+            border-radius: 5px;
+            flex-grow: 1; /* Ensures the span grows to fill the available space */
+            margin-bottom: 5px; /* Optional: space between rows of spans */
+            text-align: center;
+        }
+
+        .tags span:hover {
+            border: 3px solid var(--primaryContainer);
+            background-color: var(--background);
+            cursor: pointer;
+        }
+
+        .tags .active {
+            border: 3px solid var(--error);
+            background-color: var(--error);
+            color: var(--onError);
+        }
+        .tags .active:hover {
+            border: 3px solid var(--error);
+            background-color: var(--error);
+            color: var(--onError);
+        }
+        @media screen and (max-width: 1050px) {
+            .tags span {
+                display: inline-block;
+                font-size: 20px;
+                padding: 5px 10px;
+            } 
+        }
+
+        .overlay {
+            background-color: var(--primaryContainer);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding-top: 5vh;
+            display: none;
+        }
+        .overlay h2 {
+            text-align: center;
+            color: var(--primary);
+        }
+        .overlay .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay img {
+            border: 5px solid var(--tertiary);
+            border-radius: 5px;
+            max-width: 90%; /* Ensures the image does not overflow */
+            max-height: 80vh;
+        }
+        .overlay .buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .overlay .close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .overlay a {
+            text-decoration: none;
+            background-color: var(--background);
+            border-radius: 30px;
+            padding: 5px 20px;
+            color: var(--onBackground);
+            transition: 0.2s;
+        }
+
+        .overlay a:hover {
+            background-color: var(--error);
+            color: var(--onError);
+        }
+
+
     </style>
 </head>
 
@@ -150,19 +292,39 @@
                 </h1>   
             </div>        
         </div>
-
-        <div class="chips">
-                
+        
+        <div class="tags-container">
+            <div class="tags" id="tags">
+                <!-- Tags rendered here -->
+            </div>
         </div>
-            
+
         <div class="image-grid" id="imageContainer">
             
-            <!-- Images be here -->
+            <!-- Images be rendered here -->
         </div>
         
         <div class="loading" id="loading">
             <p>Loading more images...</p></div>
 
+    </div>
+
+    <div id="imageOverlay" class="overlay">
+
+        <div class="close">
+            <a href="#" id="closeOverlay">Close</a>
+        </div>
+        <h2 id="imageTitle">IMAGE TITLE GO HERE</h2>
+
+        <div class="image-container">
+            <img id="overlayImage" src="">
+        </div>
+
+        <div class="buttons">
+            <a href="#" id="downloadImage" download>Download</a>
+            <a href="#" id="shareImage">Share</a>
+        </div>
+        
     </div>
 
 
@@ -196,10 +358,10 @@
 
 
     <script src="main.js"></script>
+    <script src="overlay.js"></script>
     <script src="/assets/js/collabsible.js"></script>
     <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/collabsible.js"></script>
-
 
 
 </body>

@@ -1,0 +1,26 @@
+[
+    {
+        "ID": "1",
+        "tag": "Buildings"
+    },
+    {
+        "ID": "2",
+        "tag": "Nature"
+    },
+    {
+        "ID": "3",
+        "tag": "Cars"
+    },
+    {
+        "ID": "4",
+        "tag": "Animals"
+    },
+    {
+        "ID": "5",
+        "tag": "Alleyways"
+    },
+    {
+        "ID": "6",
+        "tag": "Train Stations"
+    }
+]
