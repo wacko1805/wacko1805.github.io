@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primaryContainer);
+  background: var(--secondaryContainer);
   border-radius: var(--radius-big);
   transition: background 0.2s;
 }
@@ -112,7 +112,7 @@ body {
 .cards-parent {
   border-radius: 20px 20px 0px 0px;
   position: fixed;
-  background-color: var(--primaryContainer);
+  background-color: var(--secondaryContainer);
   bottom: 0;
   padding: 0px 15px 15px 15px;
   left: 0;

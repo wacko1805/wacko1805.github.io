@@ -177,8 +177,8 @@
             font-size: 20px;
             padding: 5px 10px;
             margin-right: 5px;
-            background-color: var(--primaryContainer);
-            border: 3px solid var(--primaryContainer);
+            background-color: var(--secondaryContainer);
+            border: 3px solid var(--secondaryContainer);
             color: var(--error);
             border-radius: 5px;
             flex-grow: 1; /* Ensures the span grows to fill the available space */
@@ -187,7 +187,7 @@
         }
 
         .tags span:hover {
-            border: 3px solid var(--primaryContainer);
+            border: 3px solid var(--secondaryContainer);
             background-color: var(--background);
             cursor: pointer;
         }
@@ -211,7 +211,7 @@
         }
 
         .overlay {
-            background-color: var(--primaryContainer);
+            background-color: var(--secondaryContainer);
             width: 100vw;
             height: 100vh;
             position: fixed;
@@ -310,7 +310,7 @@
     </div>
 
     <div id="imageOverlay" class="overlay">
-
+        <p id="imageId">ID</p>
         <div class="close">
             <a href="#" id="closeOverlay">Close</a>
         </div>

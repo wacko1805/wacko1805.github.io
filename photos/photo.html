@@ -9,6 +9,7 @@
     <meta name="description" content="Jack Sam Portfolio">
     <meta name="keywords" content="MagiskGApps, Jack Sam, Magisk, android, web, MonetWebAdapter, DynamicWebAdapter, wacko1805, wacko1805 github, wacko, jacksam, jacks.am">
     <meta name="author" content="Wacko1805">
+    <script src="https://kit.fontawesome.com/14f55a56cc.js" crossorigin="anonymous"></script>
 
     <style>
         body {
@@ -25,6 +26,7 @@
         .big-image-container img {
             max-width: 100%;
             max-height: 100vh;
+            border-radius: 5px;
         }
  
 
@@ -40,10 +42,78 @@
 <body>
     <div class="responsive-main">
         <div class="big-image-container">
-            <img src="https://wacko1805.github.io/photos/dir/Old%20Cottage_1736154890.jpg">
+            <!-- <h1 id="title"></h1> -->
+            <img id="photo">
+            <!-- <p id="tags"></p> -->
         </div>
     </main>
-    
+
+        <!-- Bottom Fixed cards: -->
+        <div class="cards-parent"> 
+            <span class="toggleButton">
+                <i id="toggleClassBtn" class="fa fa-chevron-up"></i>
+            </span>
+        
+            <div class="cards">
+                        
+                <div id="projects" class="card">
+                    <p>Projects</p>
+                </div>
+                    
+                <div id="photos" class="card active">
+                    <p>Photos</p>
+                </div>
+                    
+                <div id="about" class="card">
+                    <p>About Me</p>
+                </div>
+                    
+                <div id="blog" class="card">
+                    <p>Blog</p>
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+    <script>
+        // Get query parameter 'p'
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('p');
+
+        // Fetch the JSON data from the external file
+        fetch('photos.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load JSON file');
+                }
+                return response.json();
+            })
+            .then(photoData => {
+                // Find the photo by ID
+                const photo = photoData.find(item => item.id === id);
+
+                // Display photo if found
+                if (photo) {
+                    // document.getElementById('title').textContent = photo.title;
+                    document.getElementById('photo').src = `dir/${photo.location}`;
+                    // document.getElementById('tags').textContent = `Tags: ${photo.tags}`;
+                } else {
+                    document.body.innerHTML = '<h1>Photo not found</h1>';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.body.innerHTML = '<h1>Error loading photos</h1>';
+            });
+    </script>
+    <script src="/assets/js/collabsible.js"></script>
+    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/collabsible.js"></script>
+    <script>
+        addClosedClasses();
+    </script>
 </body>
 
 </html>

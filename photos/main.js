@@ -130,11 +130,14 @@ function loadImageInOverlay(image) {
     const overlayImage = document.getElementById('overlayImage');
     const imageTitle = document.getElementById('imageTitle');
     const downloadLink = document.getElementById('downloadImage');
+    const imageId = document.getElementById('imageId');
 
-    if (overlay && overlayImage && imageTitle && downloadLink) {
+
+    if (overlay && overlayImage && imageTitle && downloadLink && imageId) {
         // Set the overlay image and title
         overlayImage.src = dir + image.location;
         imageTitle.textContent = image.title;
+        imageId.textContent = image.id;
 
         // Update the download link
         downloadLink.href = overlayImage.src;
@@ -160,7 +163,7 @@ document.getElementById('shareImage').addEventListener('click', async (event) =>
             await navigator.share({
                 title: imageTitle.textContent,
                 text: `Check out this image: ${imageTitle.textContent}`,
-                url: "https://Jacks.am",
+                url: `https://Jacks.am/photos/photo.html?p=${imageId.textContent}`,
             });
             console.log('Image shared successfully.');
         } catch (error) {

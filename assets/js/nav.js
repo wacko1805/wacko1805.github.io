@@ -8,18 +8,34 @@ var photosButton = document.getElementById("photos");
 var aboutButton = document.getElementById("about");
 var blogButton = document.getElementById("blog");
 
+function navigateWithClassAddition(url) {
+    addClosedClasses();
+    localStorage.setItem("isClosed", "true"); // Save the state
+    setTimeout(function() {
+        window.location.href = url; // Navigate after a short delay
+    }, 500);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (localStorage.getItem("isClosed") === "true") {
+        addClosedClasses();
+    }
+});
+
+
+
 projectsButton.addEventListener("click", function() {
-    window.location.href = projects;  // Open in the current tab
+    navigateWithClassAddition(projects);
 });
 
 photosButton.addEventListener("click", function() {
-    window.location.href = photos;  // Open in the current tab
+    navigateWithClassAddition(photos);
 });
 
 aboutButton.addEventListener("click", function() {
-    window.location.href = about;  // Open in the current tab
+    navigateWithClassAddition(about);
 });
 
 blogButton.addEventListener("click", function() {
-    window.location.href = blog;  // Open in the current tab
+    navigateWithClassAddition(blog);
 });
