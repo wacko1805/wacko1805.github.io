@@ -9,7 +9,7 @@ var aboutButton = document.getElementById("about");
 var blogButton = document.getElementById("blog");
 
 function navigateWithClassAddition(url) {
-    addClosedClasses();
+    // addClosedClasses();
     localStorage.setItem("isClosed", "true"); // Save the state
     setTimeout(function() {
         window.location.href = url; // Navigate after a short delay

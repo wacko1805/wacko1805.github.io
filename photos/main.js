@@ -145,7 +145,7 @@ function loadImageInOverlay(image) {
 
         // Show the overlay
         overlay.style.display = 'block';
-        imageGrid.style.display = 'none';
+        // imageGrid.style.display = 'none';
     } else {
         console.error("Overlay or image elements are missing.");
     }
