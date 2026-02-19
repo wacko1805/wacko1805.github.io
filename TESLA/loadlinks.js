@@ -11,7 +11,8 @@ async function loadLinks() {
 
                 theaterApps.forEach(app => {
                     const link = document.createElement('a');
-                    const redirectUrl = `https://www.youtube.com/redirect?q=${encodeURIComponent(app.url)}`;
+                    // const redirectUrl = `https://www.youtube.com/redirect?q=${encodeURIComponent(app.url)}`;
+                    const redirectUrl = app.url;
                     
                     link.href = redirectUrl;
                     link.className = 'btn';

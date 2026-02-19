@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Split Screen</title>
+ <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+  <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+
+     <style>
+        /* Remove all default margins and scrollbars */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* The container for the iframes */
+        .split-container {
+            display: flex; /* This puts them side-by-side */
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Each iframe takes exactly 50% */
+        iframe {
+            flex: 1; /* Distributes space equally */
+            width: 50%;
+            height: 100%;
+            border: none;
+            /* Optional: add a thin divider between them */
+            border-right: 1px solid #333;
+        }
+
+        iframe:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-container">
+        <iframe 
+            src="http://localhost/proxy.php?url=https://www.sbs.com.au/ondemand/"
+            sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
+        <iframe 
+            src="http://localhost/proxy.php?url=https://www.google.com"
+            sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
+    </div>
+
+</body>
+</html>

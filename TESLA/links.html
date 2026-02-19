@@ -7,38 +7,24 @@
     <script src="https://jacks.am/MonetWebAdapter/DynamicWebAdapter.js"></script>
     <link rel="stylesheet" href="/assets/styles/main.css">
     <style>
-        .responsive-main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
         h1 {
             color: var(--primary);
-            font-size: 2.5rem;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px var(--onPrimary);
-
         }
         p {
             color: var(--secondary);
         }
         .btn { 
             display: inline-block; 
-            padding: 10px 30px; 
+            padding: 15px 30px; 
             margin: 5px;
             background: var(--primaryContainer); 
             color: var(--onPrimaryContainer); 
             text-decoration: none; 
             border-radius: 10px; 
             font-weight: bold; 
-            font-size: 25px;
+            font-size: 20px;
             border: 3px solid var(--primaryContainer);
             transition: 0.4s;
-            text-shadow: 2px 2px var(--onPrimary);
-
         }
         .btn:hover{
             border: 3px solid var(--secondaryContainer);
@@ -53,7 +39,10 @@
 <body>
     <div class="responsive-main">
         <h1>Tesla Fullscreen Launcher</h1>
-        <a href="https://www.youtube.com/redirect?q=https://jacks.am/TESLA/links.html" class="btn">Launch Fullscreen Mode</a>
+        <p>Exploits a Youtube redirect feature</p>
+        
+        <div id="button-container">Loading links...</div>
     </div>
+    <script src="loadlinks.js"></script>
 </body>
 </html>
