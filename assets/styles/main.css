@@ -85,6 +85,13 @@ body {
     text-transform: capitalize;
     font-weight: bolder;
     transition: 0.7s;
+    text-shadow: 8px 5px var(--tertiaryContainer);
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 20px;
+
+
+
 }
 
 @media screen and (max-width: 1350px) {
@@ -106,6 +113,9 @@ body {
 
 .name h1 span:hover {
   color: var(--error);
+  text-shadow: 8px 5px var(--onError);
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 
 
