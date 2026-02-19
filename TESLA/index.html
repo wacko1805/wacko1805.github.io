@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JACKSAM | Tesla Test</title>
     <script src="https://jacks.am/MonetWebAdapter/DynamicWebAdapter.js"></script>
-    <link rel="stylesheet" href="/assets/styles/main.css">
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+        body {
+            font-family: 'Shippori Antique B1', sans-serif;
+            background: var(--background);
+        }
         .responsive-main {
             display: flex;
             flex-direction: column;
@@ -14,7 +19,24 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
+            padding-left: 20vw;
+            padding-right: 20vw;
         }
+
+        @media screen and (max-width: 1350px) {
+        .responsive-main {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+        }
+
+        @media screen and (max-width: 850px) {
+        .responsive-main {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+        }
+
         h1 {
             color: var(--primary);
             font-size: 2.5rem;
@@ -27,7 +49,7 @@
         }
         .btn { 
             display: inline-block; 
-            padding: 10px 30px; 
+            padding: 10px 30px 13px 30px; 
             margin: 5px;
             background: var(--primaryContainer); 
             color: var(--onPrimaryContainer); 
@@ -36,7 +58,7 @@
             font-weight: bold; 
             font-size: 25px;
             border: 3px solid var(--primaryContainer);
-            transition: 0.4s;
+            transition: 0.3s ease-in-out;
             text-shadow: 2px 2px var(--onPrimary);
 
         }
@@ -48,12 +70,77 @@
             background: var(--background);
             color: var(--onBackground);
         }
+        .view {
+            font-style: italic;
+            color: var(--secondary);
+            font-size: 13px;
+        }
+
+
+        /* Styling the popup box itself */
+            dialog {
+            border: none;
+            border-radius: 15px;
+            background-color: var(--error);
+            color: var(--onError);
+            padding: 1px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            }
+            dialog h2 {
+                color: var(--onError);
+                font-size: 2rem;
+                margin: 0;
+                padding: 20px 0px 10px 0;
+            }
+            dialog p {
+                color: var(--onError);
+                font-size: 1rem;
+                margin: 0;
+                padding: 0px 0px 30px 0;
+            }
+            dialog .btn {
+                display: block;
+                text-align: center;
+                margin: 0;
+            }
+            dialog .btn:hover{
+
+            }
+            /* Styling the dimmed background */
+            dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px); 
+            }
+
+            /* Animation for opening */
+            dialog[open] {
+            animation: fadeIn 0.3s ease-out;
+            }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
     </style>
 </head>
 <body>
     <div class="responsive-main">
         <h1>Tesla Fullscreen Launcher</h1>
-        <a href="https://www.youtube.com/redirect?q=https://jacks.am/TESLA/links.html" class="btn">Launch Fullscreen Mode</a>
+        <!-- <button id="openPopup">TEST</button> -->
+        <a id="openPopup" class="btn" href="#">Launch Fullscreen Mode</a>
+        <a href="links.html" class="view">View Avaliable Sites</a>
     </div>
+
+
+        <dialog id="myPopup">
+            <h2>Important!</h2>
+            <p>To open in fullscreen mode, please press the "GO TO SITE" link on the next page.</p>
+            <a href="https://www.youtube.com/redirect?q=https://jacks.am/TESLA/links.html" class="btn">Continue</a>
+            <br>
+            <!-- <button id="closePopup">Close</button> -->
+        </dialog>
+</div>
+<script src="popup.js"></script>
 </body>
 </html>
