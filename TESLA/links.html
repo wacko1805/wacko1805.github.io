@@ -9,22 +9,42 @@
     <style>
         h1 {
             color: var(--primary);
+            font-size: 3.5rem;
         }
         p {
             color: var(--secondary);
         }
+        .responsive-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+        }
+        .container {
+             display: flex;
+            flex-wrap: wrap; /* Allows wrapping to new lines on mobile */
+            gap: 12px;       /* Space between buttons */
+        }
         .btn { 
-            display: inline-block; 
+            flex: 1 0 auto; 
             padding: 15px 30px; 
-            margin: 5px;
+            text-align: center;
             background: var(--primaryContainer); 
             color: var(--onPrimaryContainer); 
             text-decoration: none; 
             border-radius: 10px; 
             font-weight: bold; 
-            font-size: 20px;
+            font-size: 1rem;
             border: 3px solid var(--primaryContainer);
             transition: 0.4s;
+            white-space: nowrap; /* Keeps text on one line */
+        }
+        .btn img {
+            width: 3rem; /* Optional: adjust size to fit your button */
+            display: block;
+            margin: 0 auto 10px auto; /* Centers the image and adds space below */
         }
         .btn:hover{
             border: 3px solid var(--secondaryContainer);
@@ -39,9 +59,9 @@
 <body>
     <div class="responsive-main">
         <h1>Tesla Fullscreen Launcher</h1>
-        <p>Exploits a Youtube redirect feature</p>
         
-        <div id="button-container">Loading links...</div>
+            <div class="container" id="button-container">Loading links...</div>
+        
     </div>
     <script src="loadlinks.js"></script>
 </body>

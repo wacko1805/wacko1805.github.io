@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to new lines on mobile */
+  gap: 12px;       /* Space between buttons */
+  width: 100%;
+}
+
+.btn {
+  /* This is the key line */
+  flex: 1 0 120px; 
+  
+  /* Your base padding */
+  padding: 10px 20px;
+  
+  /* Visuals */
+  text-align: center;
+  border: 1px solid #333;
+  background: #f9f9f9;
+  white-space: nowrap; /* Keeps text on one line */
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+    </style>
+</head>
+<body>
+    <div class="button-grid">
+  <button class="btn">Dashboard</button>
+  <button class="btn">Settings</button>
+  <button class="btn">Profile</button>
+  <button class="btn">System Logs</button>
+  <button class="btn">Cloud Storage</button>
+</div>
+</body>
+</html>

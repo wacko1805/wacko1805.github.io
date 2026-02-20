@@ -1,34 +1,42 @@
 [
     {   
         "name": "SBS On Demand", 
+        "image": "https://www.sbs.com.au/favicon.ico",
         "url": "https://www.sbs.com.au/ondemand/" 
     },
     {   
         "name": "7plus", 
+        "image": "https://7plus.com.au/favicon.ico",
         "url": "https://7plus.com.au/" 
     },
     {   
         "name": "9Now", 
+        "image": "https://www.9now.com.au/favicon.ico",
         "url": "https://www.9now.com.au/" 
     },
     {   
         "name": "10Play", 
+        "image": "https://10.com.au/images/10-Logo-Blue.png",
         "url": "https://10play.com.au/" 
     },
     {   
-        "name": "ABC iView", 
+        "name": "ABC iview", 
+        "image": "https://cdn.iview.abc.net.au/thumbs/512/X0_677459da6e859_2000.png",
         "url": "https://iview.abc.net.au/" 
     },
     {   
         "name": "Stan", 
+        "image": "https://www.stan.com.au/favicon.ico",
         "url": "https://www.stan.com.au/" 
     },
     {   
         "name": "Binge", 
+        "image": "https://binge.com.au/favicon.ico",
         "url": "https://binge.com.au/" 
     },
     {   
         "name": "Netflix", 
+        "image": "https://www.netflix.com/favicon.ico",
         "url": "https://www.netflix.com/" 
     }
 
