@@ -38,6 +38,26 @@
         "name": "Netflix", 
         "image": "https://www.netflix.com/favicon.ico",
         "url": "https://www.netflix.com/" 
+    },
+    {   
+        "name": "Prime Video", 
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Amazon_Prime_logo_%282024%29.svg",
+        "url": "https://www.primevideo.com/" 
+    },
+    {   
+        "name": "Disney+", 
+        "image": "https://www.disneyplus.com/favicon.ico",
+        "url": "https://www.disneyplus.com/" 
+    },
+    {   
+        "name": "Apple TV+", 
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/AppleTVLogo.svg",
+        "url": "https://tv.apple.com/" 
+    },
+    {   
+        "name": "Foxtel Now", 
+        "image": "https://www.foxtel.com.au/favicon.ico",
+        "url": "https://www.foxtel.com.au/now/" 
     }
 
 ]
